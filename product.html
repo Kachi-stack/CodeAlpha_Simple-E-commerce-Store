@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product details | Kachi's Store</title>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Kachi's Store</a>
+        <nav>
+            <a href="index.html#products">Shop</a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <main class="product-details-page">
+        <a class="back-link" href="index.html#products">← Back to products</a>
+        <p id="product-message" class="account-message" role="status" aria-live="polite">Loading product…</p>
+        <article id="product-detail" class="product-detail-card" hidden>
+            <img id="detail-image" alt="">
+            <div class="product-detail-copy">
+                <p class="eyebrow">KACHI'S STORE</p>
+                <h1 id="detail-name"></h1>
+                <p id="detail-price" class="detail-price"></p>
+                <p id="detail-description" class="detail-description"></p>
+                <p id="detail-stock" class="detail-stock"></p>
+                <button id="detail-add-button" class="primary-button" type="button">Add to Cart</button>
+                <p id="cart-feedback" class="account-message" role="status" aria-live="polite"></p>
+                <a class="text-link" href="index.html#products">Continue shopping</a>
+            </div>
+        </article>
+    </main>
+
+    <script src="product-details.js"></script>
+</body>
+</html>

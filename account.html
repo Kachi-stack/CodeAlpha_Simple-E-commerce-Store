@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Account | Kachi's Store</title>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Kachi's Store</a>
+        <nav>
+            <a href="index.html#products">Shop</a>
+            <a href="account.html" aria-current="page">Account</a>
+        </nav>
+    </header>
+
+    <main class="account-page">
+        <section class="account-card">
+            <p class="eyebrow">KACHI'S STORE</p>
+            <h1>Your account</h1>
+            <p id="account-message" class="account-message" role="status" aria-live="polite"></p>
+
+            <div id="signed-in-panel" hidden>
+                <h2>Welcome, <span id="account-name"></span></h2>
+                <p>You are signed in as <span id="account-email"></span>.</p>
+                <button id="logout-button" class="primary-button" type="button">Sign out</button>
+                <a class="text-link" href="index.html#products">Continue shopping</a>
+            </div>
+
+            <div id="auth-forms">
+                <p id="auth-heading" class="auth-heading">Sign in to your account</p>
+
+                <div id="login-view">
+                    <form id="login-form" class="auth-form">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" autocomplete="email" required>
+                        <label for="login-password">Password</label>
+                        <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                        <button class="primary-button" type="submit">Sign in</button>
+                    </form>
+                    <p class="auth-switch">Don't have an account? <button id="show-register" class="inline-link" type="button">Create one</button></p>
+                </div>
+
+                <div id="register-view" hidden>
+                    <form id="register-form" class="auth-form">
+                        <label for="register-name">Full name</label>
+                        <input id="register-name" name="name" type="text" autocomplete="name" required maxlength="100">
+                        <label for="register-email">Email</label>
+                        <input id="register-email" name="email" type="email" autocomplete="email" required>
+                        <label for="register-password">Password</label>
+                        <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+                        <small>Use at least 8 characters.</small>
+                        <button class="primary-button" type="submit">Create account</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <button id="show-login" class="inline-link" type="button">Sign in</button></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="account.js"></script>
+</body>
+</html>

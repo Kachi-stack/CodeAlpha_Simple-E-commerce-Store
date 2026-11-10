@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My E-commerce store</title>
+</head>
+<body>
+
+    <!--Website Navigation-->
+    <header class="site-header">
+
+        <div class="logo">
+            Kachi's Store
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#contact">Contact</a>
+            <a href="account.html">Account</a>
+        </nav>
+
+        <div class="search-cart">
+            <form class="search-form" id="product-search">
+                <input type="search" placeholder="Search products..." aria-label="Search products">
+                <button type="submit">Search</button>
+            </form>
+            <a href="#" class="cart-link">
+                Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+
+    </header>
+
+    <!--Hero Section-->
+    <section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Discover Products You'll Love</h1>
+
+        <p>
+            Shop quality products at affordable prices.
+            Find everything you need in one place.
+        </p>
+
+        <a class="hero-button" href="#products">Shop Now</a>
+
+    </div>
+
+</section>
+
+<section class="categories" id="categories">
+    <h2>Shop by category</h2>
+    <div class="category-links">
+        <a href="#products" data-category-filter="phones-computers">Phones &amp; computers</a>
+        <a href="#products" data-category-filter="audio">Audio</a>
+        <a href="#products" data-category-filter="wearables">Wearables</a>
+    </div>
+</section>
+
+<!--Products Section-->
+<section class="products" id="products">
+
+    <h2>Featured Products</h2>
+
+    <div class="product-container" id="product-container"></div>
+    <p id="no-products-message" hidden>No products match your search or category.</p>
+
+</section>
+
+    <div class="cart-summary" id="cart">
+        <h2>Shopping Cart Summary</h2>
+
+        <div id="cart-items"></div>
+
+         <button id="clear-cart">Clear Cart</button>
+         <button id="checkout-button">Proceed to Checkout</button>
+
+         <section id="checkout-section" hidden>
+
+            <h2>Checkout</h2>
+
+            <form id="checkout-form">
+                <!-- Your customer details and order summary -->
+
+                <h3>Customer Details</h3>
+
+                <label for="customer-name">Full Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+
+                <label for="customer-email">Email Address:</label>
+                <input type="email" id="customer-email" name="customer-email" required>
+
+                <label for="delivery-address">Delivery Address:</label>
+                <textarea id="delivery-address" name="delivery-address" required></textarea>
+
+                <h3>Order Summary</h3>
+
+                <div id="order-summary">
+                    <!-- Order summary will be populated here -->
+                </div>
+
+                <p>
+                    Total: <span id="order-total">&#8358;0</span>
+                </p>
+
+                <button type="submit">Place Order</button>
+            </form>
+
+            <div id="order-confirmation" hidden>
+                <h3>Thank you for your order!</h3>
+                <p>Your order has been placed successfully.</p>
+            </div>
+
+        </section>
+
+        <p>
+            Total: <span id="cart-total">&#8358;0</span>
+        </p>
+    </div>
+<footer id="contact" class="site-footer">
+    <h2>Contact</h2>
+    <p>For help with an order, please visit the Account page.</p>
+    <a href="account.html">Go to Account</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
